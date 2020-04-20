@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TextRecognizer</string>
+    <string name="content_description">Content Description</string>
+    <string name="select_file">Browse File</string>
+    <string name="select_image">Select Image</string>
+    <string name="capture_image">Capture Image</string>
+    <string name="show_hide_image">Show/Hide Image:</string>
+    <string name="confidence_ratio">Confidence Ratio:</string>
+    <string name="language_code">Language Code:</string>
+    <string name="from_image_picker">From Photo Picker</string>
+    <string name="from_camera">from Camera</string>
+    <string name="live_image_analysis">Live Image Analysis</string>
+    <string name="app_title">Text recognition and Language detect Sample App for Firebase ML kit</string>
+</resources>
