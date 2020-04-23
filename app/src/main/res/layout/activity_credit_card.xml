@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreditCardActivity">
+
+    <Button
+        android:id="@+id/btnCaptureImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/holo_red_light"
+        android:text="@string/scan_credit_card"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/sw_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:checked="true"
+        android:text="@string/show_hide_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivFromCamera" />
+
+    <ImageView
+        android:id="@+id/ivFromCamera"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/content_description"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutCardNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCardType">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtCreditCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/credit_card" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txtCardType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lbCardType"
+        app:layout_constraintTop_toBottomOf="@+id/sw_image"
+        tools:text="Master Card" />
+
+    <TextView
+        android:id="@+id/lbCardType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/card_type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sw_image" />
+
+    <TextView
+        android:id="@+id/lbValidCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/valid_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbCardType" />
+
+    <TextView
+        android:id="@+id/txtValidCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtCardType"
+        app:layout_constraintTop_toBottomOf="@+id/txtCardType" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutExpiryMonth"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutCardNumber">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtExpiryMonth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/month" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutExpiryYear"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textInputLayoutExpiryMonth"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutCardNumber">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtExpiryYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/year" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

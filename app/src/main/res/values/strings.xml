@@ -11,4 +11,11 @@
     <string name="from_camera">from Camera</string>
     <string name="live_image_analysis">Live Image Analysis</string>
     <string name="app_title">Text recognition and Language detect Sample App for Firebase ML kit</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="card_type">Card Type</string>
+    <string name="credit_card_reader">Credit Card Scanner</string>
+    <string name="valid_card">Valid Card</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="scan_credit_card">Scan Credit Card</string>
 </resources>

@@ -22,5 +22,9 @@ class LauncherActivity : AppCompatActivity() {
         btnLiveCamera.setOnClickListener {
             startActivity<CameraxAnalysisActivity>()
         }
+
+        btnCreditCard.setOnClickListener {
+            startActivity<CreditCardActivity>()
+        }
     }
 }
